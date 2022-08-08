@@ -12,8 +12,6 @@ const Navigation = () => {
         align-items:center;
         gap:2em;
 
-        background-color:var(--bg-primary);
-
         padding:1em;
 
         a{
@@ -32,7 +30,7 @@ const Navigation = () => {
     `;
 
     return(
-        <Sticky top={0} innerClass='full left' >
+        <Sticky>
             <Container>
                 <a href="#me">Eu</a>
                 <a href="#carrer">Carreira</a>

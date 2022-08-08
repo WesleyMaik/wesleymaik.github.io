@@ -1,7 +1,4 @@
-//Modules
 import styled from "styled-components";
-
-//Component
 import Avatar from "../avatar";
 import Github from "./github";
 import Navigation from "./navigation";
@@ -31,7 +28,6 @@ const Header = () => {
     return(
         <Header>
             <Navigation />
-            <hr />
             <Avatar />
             <h1 className="title">
                 <span>Wesley Maik</span>
@@ -42,6 +38,7 @@ const Header = () => {
                     data-target="animated-image.originalImage"
                 />
             </h1>
+
             <Github />
             <hr />
             <SocialFloat />

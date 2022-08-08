@@ -6,6 +6,7 @@ import Avatar from "../avatar";
 import Github from "./github";
 import Navigation from "./navigation";
 import { SocialFloat } from "./social";
+import Sticky from "react-stickynode";
 
 const Header = () => {
     const Header = styled.header`
@@ -30,7 +31,9 @@ const Header = () => {
 
     return(
         <Header>
-            <Navigation />
+            <Sticky enabled top={0}>
+                <Navigation />
+            </Sticky>
             <hr />
             <Avatar />
             <h1 className="title">

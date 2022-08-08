@@ -12,6 +12,8 @@ const Avatar = () => {
 
         border-radius:25%;
 
+        /* box-shadow:5px 5px 0 var(--color-primary); */
+
         .img{
             width:100%;
             height:100%;

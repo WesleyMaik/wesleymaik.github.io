@@ -32,7 +32,7 @@ const Navigation = () => {
     `;
 
     return(
-        <Sticky top={0} innerClass='full left' >
+        <Sticky top={0} innerClass='full'>
             <Container>
                 <a href="#me">Eu</a>
                 <a href="#carrer">Carreira</a>

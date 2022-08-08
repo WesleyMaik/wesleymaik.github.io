@@ -1,7 +1,4 @@
-//Modules
 import styled from "styled-components";
-
-//Component
 import Avatar from "../avatar";
 import Github from "./github";
 import Navigation from "./navigation";
