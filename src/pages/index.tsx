@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 //Components
 import Header from "../components/template/header";
+import AboutMe from "../components/sections/about";
 
 const App = () => {
     const Main = styled.main`
@@ -16,6 +17,7 @@ const App = () => {
     return(
       <Main className="test">
         <Header />
+        <AboutMe />
       </Main>
     );
 };

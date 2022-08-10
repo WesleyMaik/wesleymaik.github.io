@@ -10,7 +10,9 @@ const Avatar = () => {
 
         overflow:hidden;
 
-        border-radius:25%;
+        border-radius:12.5%;
+
+        box-shadow:2px 2px 0 var(--color-primary);
 
         .img{
             width:100%;

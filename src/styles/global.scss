@@ -5,7 +5,7 @@
     --bg-primary:#1b181a;
     --bg-secundary:#2c372e;
     --color-default:#fff;
-    --color-primary:#00ffd0;
+    --color-primary:#00FFBB;
     --color-secundary:#01dba4;
     --color-fade:#01dba410;
 }
@@ -52,4 +52,21 @@ hr{
 .full{
     width: 100% !important;
     left:0;
+}
+
+button{
+    cursor: pointer;
+
+    outline:none;
+    border:none;
+
+    font-size: 1.25em;
+    padding:0.5em;
+    border-radius: 4px;
+
+    transition: all ease 0.25s;
+
+    &:active{
+        transform: scale(0.95);
+    }
 }
