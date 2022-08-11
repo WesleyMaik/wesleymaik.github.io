@@ -2,7 +2,7 @@
 import styled from "styled-components";
 
 //Component
-import { BsTwitter, BsGithub } from 'react-icons/bs';
+import { BsTwitter, BsGithub, BsLinkedin } from 'react-icons/bs';
 import { FaDev } from 'react-icons/fa';
 import { HTMLAttributes } from "react";
 
@@ -20,8 +20,6 @@ const Social = (props:ISocial) => {
         justify-content:center;
         gap:0.5em;
 
-        z-index:10;
-
         .btn{
             cursor: pointer;
 
@@ -38,8 +36,14 @@ const Social = (props:ISocial) => {
 
             background-color:var(--bg-primary);
 
+            z-index:10;
+            
+            transition:all ease 0.5s;
+
             &:hover{
-                background-color:var(--color-fade);
+                color:var(--bg-primary);
+                background-color:var(--color-primary);
+                border-color:var(--bg-primary);
             }
 
             .text{
@@ -50,6 +54,12 @@ const Social = (props:ISocial) => {
 
     return(
         <Container {...props}>
+            <a href="https://linkedin.com/in/wesleymaik" target="_blank">
+                <div className="btn">
+                    <BsLinkedin />
+                    <span className="text">LinkedIn</span>
+                </div>
+            </a>
             <a href="https://twitter.com/euwesleymaik" target="_blank">
                 <div className="btn">
                     <BsTwitter />
@@ -76,7 +86,7 @@ export const SocialFloat = () => {
     const Container = styled.div`
         position:fixed;
         bottom:0;
-        left:0;
+        right:0;
 
         margin:1em;
     `;

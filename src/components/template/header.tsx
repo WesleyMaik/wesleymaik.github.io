@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Avatar from "../avatar";
 import Github from "./github";
 import Navigation from "./navigation";
-import { SocialFloat } from "./social";
+import Social, { SocialFloat } from "./social";
 
 const Header = () => {
     const Header = styled.header`
@@ -18,11 +18,12 @@ const Header = () => {
         gap:0.5em;
 
         padding:0.5em;
-        margin:1em 0;
+
+        margin:0;
 
         .head{
             width:100%;
-            min-height:30em;
+            min-height:40em;
 
             display:flex;
             flex-direction:row;
@@ -65,7 +66,6 @@ const Header = () => {
     return(
         <Header>
             <Navigation />
-            <hr />
             <div className="head">
                 <Avatar />
                 <div className="text">
@@ -76,7 +76,7 @@ const Header = () => {
                         <span>Wesley Maik</span>
                         <img
                             className="icon"
-                            src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif"
+                            src="/assets/icon/wave.gif"
                             style={{ display: "inline-block", margin:'0 0.25em' }}
                         />
                     </h1>
@@ -90,8 +90,7 @@ const Header = () => {
                     <button className="contact-me">Contate-me</button>
                 </div>
             </div>
-            <hr />
-            <SocialFloat />
+            <Social direction="row" />
         </Header>
     )
 };

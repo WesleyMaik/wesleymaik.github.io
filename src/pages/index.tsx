@@ -4,20 +4,28 @@ import styled from "styled-components";
 //Components
 import Header from "../components/template/header";
 import AboutMe from "../components/sections/about";
+import Hackings from "../components/sections/hacking";
+import Work from "../components/sections/work";
 
 const App = () => {
     const Main = styled.main`
-      max-width:800px;
-
-      position:relative;
-
       margin:auto;
+
+      > * {
+        margin:2em 0;
+        > *{
+          max-width:800px;
+          margin:auto;
+        }
+      }
     `;
 
     return(
-      <Main className="test">
+      <Main>
         <Header />
         <AboutMe />
+        <Hackings />
+        <Work />
       </Main>
     );
 };

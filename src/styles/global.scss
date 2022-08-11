@@ -1,12 +1,15 @@
 //Fonts
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@300;400;600&family=Roboto+Mono:wght@300;400;700&family=Ubuntu:wght@300;400;500&display=swap');
 
+//Animation
+@import url('./animation.scss');
+
 :root{
     --bg-primary:#1b181a;
     --bg-secundary:#2c372e;
     --color-default:#fff;
     --color-primary:#00FFBB;
-    --color-secundary:#01dba4;
+    --color-secundary:#00b98a;
     --color-fade:#01dba410;
 }
 
@@ -23,7 +26,7 @@ html, body{
 
     font-family: 'Arial', 'Tahoma';
 
-    min-height: 2000px;
+    scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -69,4 +72,8 @@ button{
     &:active{
         transform: scale(0.95);
     }
+}
+
+.hidden{
+    display: none !important;
 }
