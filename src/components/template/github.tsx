@@ -1,146 +1,123 @@
 //Modules
-import { useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 import { api } from "../../services/api";
+import { useEffect, useState } from "react";
+import { IGithubRepos } from "../../types/github";
+import { getGithubRepos, setGithubRepos } from "../../hook/apis";
 
 //Components
-import { TiLocation } from 'react-icons/ti';
-import { getGithubStats, setGithubStats } from "../../hook/session";
+import { SiGithub } from "react-icons/si";
 
-export interface IGithub { 
-    login: string;
-    id: number;
-    node_id: string;
-    avatar_url: string;
-    gravatar_id: string;
-    url: string;
-    html_url: string;
-    followers_url: string;
-    following_url: string;
-    gists_url: string;
-    starred_url: string;
-    subscriptions_url: string;
-    organizations_url: string;
-    repos_url: string;
-    events_url: string;
-    received_events_url: string;
-    type: string;
-    site_admin: boolean;
-    name: string;
-    company: string;
-    blog: string;
-    location: string;
-    email: string;
-    hireable: string;
-    bio: string;
-    twitter_username: string;
-    public_repos: number;
-    public_gists: number;
-    followers: number;
-    following: number;
-    created_at: string;
-    updated_at: string;
-};
-  
-
-const gitInfo = {};
-
-const Github = () => { 
+export const GithubRepos = () => {
     const Container = styled.div`
-        width:100%;
-
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
-        align-items:center;
-        gap:0.5em;
-
-        .location{
-            .title{
-                color:#d3d3d380;
-            }
-        }
-
-        .info{ 
-            width:100%;
-
+        .repos-wrapper{
             display:flex;
-            flex-direction:row;
+            flex-direction:column;
             gap:0.5em;
 
-
-            .card{
-                width:100%;
-
+            .content{
                 display:flex;
-                align-items:center;
-                flex-direction:column;
-                gap:0.5em;
+                flex-direction:row;
+                gap:1em;
 
-                padding:1em;
+                border:1px solid #00000040;
+                border-radius:8px;
 
-                background-color:var(--color-fade);
+                background-color:#3b3b3b;
 
-                border-radius:4px;
+                overflow:hidden;
 
-                *{
-                    margin:0;
+                transition:all ease 0.5s;
+
+                &:active{
+                    transform:scale(0.95);
                 }
 
-                .title{
-                    font-weight:300;
+                .icon{
+                    display:flex;
+                    align-items:center;
+
+                    color:#fff;
+                    background-color:#222222;
+
+                    padding:1.5em;
+                }
+
+                .info{
+                    padding:1em 0;
+
+                    .title, .description, .url{
+                        display: -webkit-box;
+                        text-overflow: ellipsis;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 3;
+                        overflow:hidden;
+
+                        color:#fff;
+                        margin:0;
+                    }
+
+                    .url{
+                        font-size:0.75em;
+                        color:#8b8b8b;
+                    }
                 }
             }
         }
     `;
-
-    const savedData = getGithubStats();
-
-    const [data, setData] = useState<IGithub | null>(savedData || null),
-          handleData = useCallback((data:IGithub) => {
-            setData(data);
-          }, [data])
-
+    
+    //Saved repos to prevent rated limit api's call
+    const savedRepos = getGithubRepos();
+    //Github Repos
+    const [repos, setRepos] = useState<IGithubRepos[] | null>(savedRepos || null);
+    //UseEffect
     useEffect(() => {
-        if(!Boolean(savedData)){
-            api.get('https://api.github.com/users/wesleymaik')
+        if(!Boolean(savedRepos)){
+            api.get('https://api.github.com/users/wesleymaik/repos?sort=created&direction=desc')
             .then((response) => {
-                const result = response.data as IGithub;
-                handleData(result);
-                setGithubStats(result)
+                const result = response.data as IGithubRepos[],
+                      withoutThisPage = result.filter(repo => repo.name != "wesleymaik.github.io");
+                setRepos(withoutThisPage);
+                setGithubRepos(result)
             })
             .catch((err) => {
-                console.log(err);
-            });
-        };
-    });
+                console.log(err.response.data.message);
+            })
+        }
+    }, [repos])
 
     return(
         <Container>
-                <div className="location">
-                    <p className="title"><TiLocation className="icon" />{ data?.location || 'Campo Grande/MS' }</p>
-                </div>
+            <h2 className="title">/projetos <SiGithub /></h2>
+            <div className="repos-wrapper">
                 {
-                    data &&
-                    <>
-                    <div className="info">
-                        <div className="card">
-                            <h2 className="text">{ data?.public_repos }</h2>
-                            <h5 className="title">Repositórios</h5>
-                        </div>
-                        <div className="card">
-                            <h2 className="text">{ data?.followers }</h2>
-                            <h5 className="title">Seguidores</h5>
-                        </div>
-                        <div className="card">
-                            <h2 className="text">{ data?.following }</h2>
-                            <h5 className="title">Seguindo</h5>
-                        </div>
-                    </div>
-                    </>
-                }
-        </Container>
-    )
-};
+                    repos && repos.slice(0, 3).map((repo, key) => {
+                        //GH config
+                        const title = repo.name,
+                            description = repo.description,
+                            hasPage = repo.has_pages,
+                            url = !Boolean(hasPage) ? repo.html_url : `https://wesleymaik.github.io/${title.toLowerCase()}`;
 
-export default Github;
+                        return(
+                            <a href={url} target="_blank" key={key} className="content" data-highlight={String(hasPage)}>
+                                <div className="icon">
+                                    <SiGithub />
+                                </div>
+                                <div className="info">
+                                    <h2 className="title">{ title }</h2>
+                                    <h5 className="description">{ description }</h5>
+                                    <p className="url">{ url }</p>
+                                </div>
+                            </a>
+                        )
+                    })
+                }
+                <a href="https://github.com/WesleyMaik?tab=repositories" target="_blank" className="content">
+                    <div className="info full">
+                        <h4 className="title center">Ver todos</h4>
+                    </div>
+                </a>
+            </div>
+        </Container>
+    );
+};

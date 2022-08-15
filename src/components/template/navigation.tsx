@@ -1,9 +1,9 @@
 //Modules
 import styled from "styled-components";
+import { useRef } from "react";
 
 //Components
 import Sticky from "react-stickynode";
-import { useRef } from "react";
 
 const Navigation = () => {
     const Container = styled.div`
@@ -111,14 +111,15 @@ const Navigation = () => {
         <Container>
             <Sticky top={0} className='sticky' innerClass='inner'>
                     <div className="wrapper">
-                        <div className="icon" onClick={handleHamburger}>
+                        <div className="icon focus" onClick={handleHamburger}>
                             <img src="/assets/icon/hamburger-emoji.png" width={48} height={48}/>
                         </div>
                         <div className="menu hidden" ref={menuRef}>
                             <a href="#me" onClick={closeHamburger}>Eu</a>
-                            <a href="#tech" onClick={closeHamburger}>Skills</a>
+                            <a href="#skills" onClick={closeHamburger}>Skills</a>
                             <a href="#carrer" onClick={closeHamburger}>Carreira</a>
                             <a href="#project" onClick={closeHamburger}>Projetos</a>
+                            <a href="#articles" onClick={closeHamburger}>Artigos</a>
                             <a href="#contact" onClick={closeHamburger}>Contato</a>
                         </div>
                     </div>

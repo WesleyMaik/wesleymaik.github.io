@@ -40,7 +40,7 @@ const Hackings = () => {
     `;
 
     return(
-        <Container id="tech">
+        <Container id="skills">
             <h2 className="title">/skills</h2>
             <div className="wrapper">
                 <Card bg="#e7e130" text="Javascript">
@@ -49,19 +49,19 @@ const Hackings = () => {
                 <Card bg="#3073e7" color="#fff" text="Typescript">
                     <SiTypescript />
                 </Card>
-                <Card bg="#30e748" text="Node.js">
+                <Card bg="#30e748" text="NodeJS">
                     <SiNodedotjs />
                 </Card>
-                <Card bg="#e9e9e9" text="Express.js">
+                <Card bg="#e9e9e9" text="ExpressJS">
                     <SiExpress />
                 </Card>
-                <Card bg="#00fff7" text="React.js">
+                <Card bg="#00fff7" text="ReactJS">
                     <SiReact />
                 </Card>
                 <Card bg="#8400ff" color="#fff" text="Redux">
                     <SiRedux />
                 </Card>
-                <Card bg="#2b2b2b" color="#fff" text="Next.js">
+                <Card bg="#2b2b2b" color="#fff" text="NextJS">
                     <SiNextdotjs />
                 </Card>
                 <Card bg="#cb6699" color="#fff" text="Sass">
@@ -97,6 +97,9 @@ const Hackings = () => {
             </div>
             <h2 className="title">/aprendendo</h2>
             <div className="wrapper">
+                <Card bg="#84fffb" text="React Native">
+                    <SiReact />
+                </Card>
                 <Card bg="#ffe019" text="Python">
                     <SiPython />
                 </Card>
@@ -106,10 +109,10 @@ const Hackings = () => {
                 <Card bg="#ff196d" color="#fff" text="GraphQl">
                     <SiGraphql />
                 </Card>
-                <Card bg="#0cb823" color="#fff" text="Vue.js">
+                <Card bg="#0cb823" color="#fff" text="VueJS">
                     <SiVuedotjs />
                 </Card>
-                <Card bg="#099a1c" color="#fff" text="Nuxt.js">
+                <Card bg="#099a1c" color="#fff" text="NuxtJS">
                     <SiNuxtdotjs />
                 </Card>
                 <Card bg="#9b19ff" color="#fff" text="Figma">

@@ -37,9 +37,9 @@ const Work = () => {
     `;
 
     return(
-        <Container>
+        <Container id="carrer">
             <div className="content">
-            <h2 className="title">/Carreira</h2>
+            <h2 className="title">/carreira</h2>
             <AccordionItem title="Controller Softwares" subtitle="Desenvolvedor Front-end" className="accordion" active>
                 <p>Março/2022 - Presente</p>
                 <br />
