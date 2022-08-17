@@ -89,13 +89,11 @@ export const DevtoArticles = () => {
 
     return(
         <>
-        {
-            (articles && articles?.length > 0) &&
             <Container id="articles">
                 <h2 className="title">/artigos <SiDevdotto /></h2>
                 <div className="articles-wrapper">
                     {
-                        articles.map((articles, key) => {
+                        articles && articles.map((articles, key) => {
                             const title = articles.title,
                                 description = articles.description,
                                 image = articles.cover_image,
@@ -115,12 +113,11 @@ export const DevtoArticles = () => {
                     }
                     <a href="https://dev.to/wesleymaik" target="_blank" className="content">
                         <div className="info full">
-                            <h4 className="title center">Ver todos</h4>
+                            <h4 className="title center">Ver Artigos</h4>
                         </div>
                     </a>
                 </div>
             </Container>
-        }
         </>
     );
 };

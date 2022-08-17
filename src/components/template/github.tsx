@@ -114,7 +114,7 @@ export const GithubRepos = () => {
                 }
                 <a href="https://github.com/WesleyMaik?tab=repositories" target="_blank" className="content">
                     <div className="info full">
-                        <h4 className="title center">Ver todos</h4>
+                        <h4 className="title center">Ver Projetos</h4>
                     </div>
                 </a>
             </div>
