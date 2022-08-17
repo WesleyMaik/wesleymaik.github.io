@@ -78,7 +78,7 @@ export const GithubRepos = () => {
                 const result = response.data as IGithubRepos[],
                       withoutThisPage = result.filter(repo => repo.name != "wesleymaik.github.io");
                 setRepos(withoutThisPage);
-                setGithubRepos(result)
+                setGithubRepos(withoutThisPage)
             })
             .catch((err) => {
                 console.log(err.response.data.message);

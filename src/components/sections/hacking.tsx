@@ -15,7 +15,6 @@ import {
     SiJavascript, 
     SiLaravel, 
     SiMongodb, 
-    SiMysql, 
     SiNextdotjs, 
     SiNodedotjs, 
     SiNuxtdotjs, 
@@ -27,7 +26,8 @@ import {
     SiTypescript, 
     SiVuedotjs, 
     SiWordpress
-} from "react-icons/si"
+} from "react-icons/si";
+import { GrMysql } from "react-icons/gr"; 
 
 const Hackings = () => {
     const Container = styled.div`
@@ -77,7 +77,7 @@ const Hackings = () => {
                     <SiWordpress />
                 </Card>
                 <Card bg="#69aaff" color="#fff" text="MySql">
-                    <SiMysql />
+                    <GrMysql />
                 </Card>
                 <Card bg="#13a725" color="#fff" text="Mongodb">
                     <SiMongodb />
@@ -109,10 +109,10 @@ const Hackings = () => {
                 <Card bg="#ff196d" color="#fff" text="GraphQl">
                     <SiGraphql />
                 </Card>
-                <Card bg="#0cb823" color="#fff" text="VueJS">
+                <Card bg="#17b381" color="#fff" text="VueJS">
                     <SiVuedotjs />
                 </Card>
-                <Card bg="#099a1c" color="#fff" text="NuxtJS">
+                <Card bg="#109269" color="#fff" text="NuxtJS">
                     <SiNuxtdotjs />
                 </Card>
                 <Card bg="#9b19ff" color="#fff" text="Figma">

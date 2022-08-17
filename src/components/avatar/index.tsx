@@ -14,6 +14,8 @@ const Avatar = () => {
 
         box-shadow:2px 2px 0 var(--color-primary);
 
+        z-index:1;
+        
         .img{
             width:100%;
             height:100%;

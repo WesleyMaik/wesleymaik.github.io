@@ -15,6 +15,8 @@ const Card = (props:ICardProps) => {
 
         margin:0.25em;
 
+        overflow:hidden;
+
         .inner{
             display:flex;
             justify-content:center;
@@ -29,7 +31,7 @@ const Card = (props:ICardProps) => {
     `;
 
     return(
-        <Container>
+        <Container {...props}>
             <div className="inner">
                 { props.children }
                 { props.text && <span className="text">{ props.text }</span> }

@@ -7,6 +7,8 @@ import AboutMe from "../components/sections/about";
 import Hackings from "../components/sections/hacking";
 import Work from "../components/sections/work";
 import Project from "../components/sections/project";
+import { Contact } from "../components/sections/contact";
+import { Footer } from "../components/sections/footer";
 
 const App = () => {
     const Main = styled.main`
@@ -28,6 +30,8 @@ const App = () => {
         <Hackings />
         <Work />
         <Project />
+        <Contact />
+        <Footer />
       </Main>
     );
 };

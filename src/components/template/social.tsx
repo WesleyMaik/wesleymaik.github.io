@@ -1,10 +1,10 @@
 //Modules
 import styled from "styled-components";
+import { HTMLAttributes } from "react";
 
 //Component
-import { BsTwitter, BsGithub, BsLinkedin } from 'react-icons/bs';
 import { FaDev } from 'react-icons/fa';
-import { HTMLAttributes } from "react";
+import { BsTwitter, BsGithub, BsLinkedin, BsInstagram } from 'react-icons/bs';
 
 interface ISocial extends HTMLAttributes<HTMLDivElement>{
     name?:boolean,
@@ -18,6 +18,7 @@ const Social = (props:ISocial) => {
         display:flex;
         flex-direction:${!props.direction ? 'row' : props.direction};
         justify-content:center;
+        flex-wrap:wrap;
         gap:0.5em;
 
         .btn{
@@ -64,6 +65,12 @@ const Social = (props:ISocial) => {
                 <div className="btn">
                     <BsTwitter />
                     <span className="text">Twitter</span>
+                </div>
+            </a>
+            <a href="https://instagram.com/eumaik_" target="_blank">
+                <div className="btn">
+                    <BsInstagram />
+                    <span className="text">Instagram</span>
                 </div>
             </a>
             <a href="https://github.com/WesleyMaik" target="_blank">

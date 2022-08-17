@@ -104,3 +104,27 @@ button{
 .center{
     text-align: center;
 }
+
+input, textarea{
+    width: 100%;
+    min-height: 2em;
+
+    padding:0.5em;
+    border: 1px solid var(--bg-primary);
+    border-radius: 6px;
+
+    background-color: transparent;
+
+    font-size: 1.5em;
+
+    transition: all ease 0.5s;
+
+    &:focus{
+        outline: 1px solid var(--bg-primary);
+    }
+}
+
+textarea{
+    resize: vertical;
+    min-height: 6em;
+}

@@ -88,34 +88,39 @@ export const DevtoArticles = () => {
     }, [articles])
 
     return(
-        <Container id="articles">
-            <h2 className="title">/artigos <SiDevdotto /></h2>
-            <div className="articles-wrapper">
-                {
-                    articles && articles.map((articles, key) => {
-                        const title = articles.title,
-                            description = articles.description,
-                            image = articles.cover_image,
-                            url = articles.url;
+        <>
+        {
+            (articles && articles?.length > 0) &&
+            <Container id="articles">
+                <h2 className="title">/artigos <SiDevdotto /></h2>
+                <div className="articles-wrapper">
+                    {
+                        articles.map((articles, key) => {
+                            const title = articles.title,
+                                description = articles.description,
+                                image = articles.cover_image,
+                                url = articles.url;
 
-                        return(
-                            <a href={url} target="_blank" className="content" key={key}>
-                                <div className="image" style={{backgroundImage: `url("${image}")`}}/>
-                                <div className="info">
-                                    <h2 className="title">{ title }</h2>
-                                    <h4 className="description">{ description }</h4>
-                                    <p className="url">{ url }</p>
-                                </div>
-                            </a>
-                        )
-                    })
-                }
-                <a href="https://dev.to/wesleymaik" target="_blank" className="content">
-                    <div className="info full">
-                        <h4 className="title center">Ver todos</h4>
-                    </div>
-                </a>
-            </div>
-        </Container>
+                            return(
+                                <a href={url} target="_blank" className="content" key={key}>
+                                    <div className="image" style={{backgroundImage: `url("${image}")`}}/>
+                                    <div className="info">
+                                        <h2 className="title">{ title }</h2>
+                                        <h4 className="description">{ description }</h4>
+                                        <p className="url">{ url }</p>
+                                    </div>
+                                </a>
+                            )
+                        })
+                    }
+                    <a href="https://dev.to/wesleymaik" target="_blank" className="content">
+                        <div className="info full">
+                            <h4 className="title center">Ver todos</h4>
+                        </div>
+                    </a>
+                </div>
+            </Container>
+        }
+        </>
     );
 };
