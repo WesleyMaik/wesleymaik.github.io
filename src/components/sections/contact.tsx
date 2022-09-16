@@ -17,8 +17,8 @@ export const Contact = () => {
             margin:2em auto;
 
             .card{
-                border-radius:2px;
-                font-size:1.25em;
+                font-size:1.125em;
+                border:1px solid #000;
             }
         }
     `;
@@ -28,13 +28,13 @@ export const Contact = () => {
             <h2 className="title">/contato</h2>
             <div className="wrapper">
                 <a href="mailto:wesleynamikaze404@gmail.com" target="_blank">
-                    <Card className="card" bg="#da315b" color="#fff"><FiAtSign /> E-mail</Card>
+                    <Card className="card" bg="transparent" color="#000"><FiAtSign /> E-mail</Card>
                 </a>
                 <a href="https://t.me/wesleymaik" target="_blank">
-                    <Card className="card" bg="#31A4DA" color="#fff"><SiTelegram /> Telegram</Card>
+                    <Card className="card" bg="transparent" color="#000"><SiTelegram /> Telegram</Card>
                 </a>
                 <a href="https://linkedin.com/in/wesleymaik" target="_blank">
-                    <Card className="card" bg="#3175da" color="#fff"><SiLinkedin /> Linkedin</Card>
+                    <Card className="card" bg="transparent" color="#000"><SiLinkedin /> Linkedin</Card>
                 </a>
             </div>
         </Container>

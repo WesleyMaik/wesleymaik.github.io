@@ -65,6 +65,12 @@ export const DevtoArticles = () => {
                     }
                 }
             }
+
+            .full{
+                .title{
+                    font-weight:300;
+                }
+            }
         }
     `;
 
@@ -113,7 +119,7 @@ export const DevtoArticles = () => {
                     }
                     <a href="https://dev.to/wesleymaik" target="_blank" className="content">
                         <div className="info full">
-                            <h4 className="title center">Ver Artigos</h4>
+                            <h4 className="title center">Ver todos os artigos</h4>
                         </div>
                     </a>
                 </div>

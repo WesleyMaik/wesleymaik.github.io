@@ -10,12 +10,10 @@ interface ICardProps extends HTMLAttributes<HTMLDivElement>{
 const Card = (props:ICardProps) => {
     const Container = styled.div`
         width:fit-content;
-
         display:inline-block;
-
         margin:0.25em;
-
         overflow:hidden;
+        border-radius:4px;
 
         .inner{
             display:flex;

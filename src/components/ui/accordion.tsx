@@ -15,6 +15,7 @@ export const AccordionItem = (props:IAccordionItem) => {
     const Container = styled.div`
         padding:0.5em;
         margin:0.5em 0;
+        overflow:hidden;
 
         &.active{
             .inner{
@@ -23,7 +24,7 @@ export const AccordionItem = (props:IAccordionItem) => {
 
                 padding:0.5em;
 
-                animation:slideDownFade ease-out 0.25s forwards;
+                animation:fade ease 0.5s forwards;
             }
 
             hr{

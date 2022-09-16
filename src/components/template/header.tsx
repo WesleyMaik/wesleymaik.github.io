@@ -29,17 +29,12 @@ const Header = () => {
             width:100%;
             .inner{
                 width:100%;
-                min-height:40em;
 
                 display:flex;
-                flex-direction:row;
-                justify-content:space-evenly;
+                flex-direction:column;
+                justify-content:flex-start;
                 align-items:center;
                 gap:1em;
-
-                @media screen and (max-width:768px){
-                    flex-direction:column;
-                }
 
                 .text{
                     z-index:1;
@@ -94,19 +89,16 @@ const Header = () => {
                             />
                         </h1>
                         <p className="paragraph">
-                            <strong>UI Design + Front-end Developer</strong>
-                                <img src='/assets/icon/technologist-emoji.png' style={{maxWidth:'32px'}}/>
+                            <strong>Front-end Developer + UI Design </strong>
+                            <img src='/assets/icon/technologist-emoji.png' style={{maxWidth:'32px'}}/>
                             <p
-                                style={{maxWidth:'250px', color:'#fff'}}
-                            >Amo criar produtos front-end sólidos e escaláveis com ótimas experiências de usuário.</p>
+                                style={{maxWidth:'384px', color:'#fff'}}
+                            >Amo criar produtos digitais sólidos e escaláveis com ótimas experiências de usuário.</p>
                         </p>
-                        <a href="#contact">
-                            <button className="contact-me">Contato</button>
-                        </a>
                     </div>
                 </div>
             </div>
-            <Social direction="row" />
+            <Social names direction="column" />
         </Header>
     )
 };

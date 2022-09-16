@@ -18,6 +18,10 @@ const AboutMe = () => {
             justify-content:space-between;
             align-items:center;
 
+            .text *{
+                font-family:'Poppins', 'Arial';
+            }
+
             @media screen and (max-width:768px) {
                 flex-direction:column;
             }
@@ -40,22 +44,23 @@ const AboutMe = () => {
             <h2 className="title">/eu</h2>
             <div className="wrapper">
                 <div className="img">
-                    <img src="/assets/images/illustration.png" width={350}/>
+                    <img src="/assets/images/illustration.png" alt="Avatar representativo do Wesley Maik" width={350}/>
                 </div>
                 <div className="text">
                     <p>
                         <span className="heading">Olá, meu nome é Wesley Maik</span> e eu amo criar soluções para a web. Meu interesse na programação começou
                         em meados de 2020, quando o sistema da empresa no qual eu atuava, me incomodava por ser incompleto
-                        para minha função. O que era só para editar alguns botões e formulários, me ensinou muito sobre HTML, CSS e Javascript!
+                        para minha função. O que era só para editar alguns botões e formulários, me ensinou muito sobre HTML, CSS e Javascript.
                     </p>
                     <p>
-                        <span className="heading">Depois de muito estudo</span>, vim a aprender PHP, Typescript, Node, frameworks e até que nos dias atuais tive
-                        a oportunidade de trabalhar em uma empresa de Softwares da minha cidade, no qual tive a chance de 
-                        estar à frente do frontend de um sistema de delivery utilizando <strong>Typescript</strong>, <strong>React</strong> &#38; <strong>Next.js</strong>.
+                        <span className="heading">Depois de muito estudo</span> comecei a entender como trabalhar com Javascript Avançado, Typescript, Node, PHP, frameworks 
+                        e eventualmente ingressei totalmente na área conseguindo meu primeiro trabalho como desenvolvedor Front-End em uma empresa de Softwares da minha cidade, 
+                        no qual tive a chance de estar à frente de um sistema de delivery utilizando <strong>Typescript</strong>, <strong>React</strong> &#38; <strong>Next.js</strong>.
                     </p>
                     <p>
-                        <span className="heading">Meu foco hoje</span> é aprimorar meus estudos em Full Stack para contruir produtos acessíveis com experiência de usuário
-                        inclusiva e moderna e desenvolver aplicativos que impactem positivamente empresas e pessoas.
+                        <span className="heading">Meu foco hoje</span> é aprimorar meus estudos para me tornar um desenvolvedor Full Stack para 
+                        contruir produtos mais acessíveis com experiência de usuários inclusiva, modernas e desenvolver aplicativos que impactem 
+                        positivamente empresas e pessoas.
                     </p>
                 </div>
             </div>

@@ -3,11 +3,11 @@ import styled from "styled-components";
 import { HTMLAttributes } from "react";
 
 //Component
-import { FaDev } from 'react-icons/fa';
-import { BsTwitter, BsGithub, BsLinkedin, BsInstagram } from 'react-icons/bs';
+import { FaCodepen, FaDev } from 'react-icons/fa';
+import { BsTwitter, BsGithub, BsLinkedin, BsInstagram, BsBehance, BsDribbble } from 'react-icons/bs';
 
 interface ISocial extends HTMLAttributes<HTMLDivElement>{
-    name?:boolean,
+    names?:boolean,
     direction?:"row" | "column"
 };
 
@@ -26,14 +26,15 @@ const Social = (props:ISocial) => {
 
             display:flex;
             flex-direction:row;
+            align-items:center;
             gap:0.5em;
 
             color:var(--color-primary);
-            font-size:1.25em;
+            font-size:1em;
 
             border:1px solid var(--color-primary);
             border-radius:4px;
-            padding:0.5em 1em;
+            padding:0.75em 1em;
 
             background-color:var(--bg-primary);
 
@@ -42,13 +43,16 @@ const Social = (props:ISocial) => {
             transition:all ease 0.5s;
 
             &:hover{
-                color:var(--bg-primary);
+                color:#000;
                 background-color:var(--color-primary);
-                border-color:var(--bg-primary);
+                border-color:none;
             }
 
             .text{
-                ${!props.name && 'display:none;'}
+                width:calc(100% - 54px);
+                text-align:center;
+                font-family:'Roboto Mono', 'Arial';
+                ${!props.names && 'display:none;'}
             }
         }
     `;
@@ -83,6 +87,24 @@ const Social = (props:ISocial) => {
                 <div className="btn">
                     <FaDev />
                     <span className="text">Dev.to</span>
+                </div>
+            </a>
+            <a href="https://behance.net/wesleymaik" target="_blank">
+                <div className="btn">
+                    <BsBehance />
+                    <span className="text">Behance</span>
+                </div>
+            </a>
+            <a href="https://dribbble.com/wesleymaik" target="_blank">
+                <div className="btn">
+                    <BsDribbble />
+                    <span className="text">Dribbble</span>
+                </div>
+            </a>
+            <a href="https://codepen.io/wesleymaik" target="_blank">
+                <div className="btn">
+                    <FaCodepen />
+                    <span className="text">Codepen</span>
                 </div>
             </a>
         </Container>

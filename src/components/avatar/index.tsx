@@ -5,27 +5,27 @@ import styled from "styled-components";
 
 const Avatar = () => {
     const Content = styled.div`
-        width:250px;
-        height:250px;
+        --size:128px;
+
+        width:var(--size);
+        height:var(--size);
 
         overflow:hidden;
 
-        border-radius:12.5%;
+        border-radius:50%;
 
         box-shadow:2px 2px 0 var(--color-primary);
 
         z-index:1;
-        
-        .img{
-            width:100%;
-            height:100%;
-        }
+
+        background-image:url('https://avatars.githubusercontent.com/u/85949116'), url('/assets/images/avatar.jpeg');
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
     `;
 
     return(
-        <Content>
-            <img className="img" src="https://avatars.githubusercontent.com/u/85949116?v=4"/>
-        </Content>
+        <Content />
     )
 };
 

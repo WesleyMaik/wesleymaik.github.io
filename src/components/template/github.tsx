@@ -57,10 +57,19 @@ export const GithubRepos = () => {
                         margin:0;
                     }
 
+                    .description{
+                        font-weight:300;
+                    }
+
                     .url{
                         font-size:0.75em;
                         color:#8b8b8b;
                     }
+                }
+            }
+            .full{
+                .title{
+                    font-weight:300;
                 }
             }
         }
@@ -114,7 +123,7 @@ export const GithubRepos = () => {
                 }
                 <a href="https://github.com/WesleyMaik?tab=repositories" target="_blank" className="content">
                     <div className="info full">
-                        <h4 className="title center">Ver Projetos</h4>
+                        <h4 className="title center">Ver todos os projetos</h4>
                     </div>
                 </a>
             </div>

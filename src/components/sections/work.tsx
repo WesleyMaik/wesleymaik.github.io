@@ -45,7 +45,7 @@ const Work = () => {
                 <br />
                 <ul>
                     <li>
-                        Fui responsável por desenvolver e coordenar o front-end do produto Delivery web da empresa, o AoPonto Delivery.
+                        Fui responsável por desenvolver e coordenar o Front-End do delivery web da empresa, o AoPonto Delivery.
                         Utilizando as tecnologias Node, Typescript, Next.js etc, foi pensado em um UI/UX moderno e intuitivo
                         valorizando as demandas dos clientes e estabelecimentos.
                     </li>

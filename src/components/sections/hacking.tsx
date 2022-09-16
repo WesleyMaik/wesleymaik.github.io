@@ -43,79 +43,79 @@ const Hackings = () => {
         <Container id="skills">
             <h2 className="title">/skills</h2>
             <div className="wrapper">
-                <Card bg="#e7e130" text="Javascript">
+                <Card bg="#f6f148" text="Javascript">
                     <SiJavascript />
                 </Card>
-                <Card bg="#3073e7" color="#fff" text="Typescript">
+                <Card bg="#5e94f0" color="#fff" text="Typescript">
                     <SiTypescript />
                 </Card>
-                <Card bg="#30e748" text="NodeJS">
+                <Card bg="#7cdd87" text="NodeJS">
                     <SiNodedotjs />
                 </Card>
                 <Card bg="#e9e9e9" text="ExpressJS">
                     <SiExpress />
                 </Card>
-                <Card bg="#00fff7" text="ReactJS">
+                <Card bg="#9bf5f2" text="ReactJS">
                     <SiReact />
                 </Card>
-                <Card bg="#8400ff" color="#fff" text="Redux">
+                <Card bg="#b66ff9" color="#fff" text="Redux">
                     <SiRedux />
                 </Card>
-                <Card bg="#2b2b2b" color="#fff" text="NextJS">
+                <Card bg="#3e3e3e" color="#fff" text="NextJS">
                     <SiNextdotjs />
                 </Card>
                 <Card bg="#cb6699" color="#fff" text="Sass">
                     <SiSass />
                 </Card>
-                <Card bg="#4893e2" color="#fff" text="PHP">
+                <Card bg="#42576d" color="#fff" text="PHP">
                     <SiPhp />
                 </Card>
-                <Card bg="#ec551a" color="#fff" text="CodeIgniter">
+                <Card bg="#ef7343" color="#fff" text="CodeIgniter">
                     <SiCodeigniter />
                 </Card>
-                <Card bg="#2784ff" color="#fff" text="Wordpress">
+                <Card bg="#2759ff" color="#fff" text="Wordpress">
                     <SiWordpress />
                 </Card>
-                <Card bg="#69aaff" color="#fff" text="MySql">
+                <Card bg="#407dcc" color="#fff" text="MySql">
                     <GrMysql />
                 </Card>
-                <Card bg="#13a725" color="#fff" text="Mongodb">
+                <Card bg="#41bf50" color="#fff" text="Mongodb">
                     <SiMongodb />
                 </Card>
-                <Card bg="#ff7519" text="Git">
+                <Card bg="#ff8636" text="Git">
                     <SiGit />
                 </Card>
                 <Card bg="#fff" text="Github">
                     <SiGithub />
                 </Card>
-                <Card bg="#3e7be4" color="#fff" text="Photoshop">
+                <Card bg="#1a273e" color="#fff" text="Photoshop">
                     <SiAdobephotoshop />
                 </Card>
-                <Card bg="#ffd000" text="Illustrator">
+                <Card bg="#d16609" color="#fff" text="Illustrator">
                     <SiAdobeillustrator />
                 </Card>
             </div>
             <h2 className="title">/aprendendo</h2>
             <div className="wrapper">
-                <Card bg="#84fffb" text="React Native">
+                <Card bg="#59d0ff" text="React Native">
                     <SiReact />
                 </Card>
-                <Card bg="#ffe019" text="Python">
+                <Card bg="#ffe53c" text="Python">
                     <SiPython />
                 </Card>
-                <Card bg="#ff3419" color="#fff" text="Laravel">
+                <Card bg="#ff563f" color="#fff" text="Laravel">
                     <SiLaravel />
                 </Card>
-                <Card bg="#ff196d" color="#fff" text="GraphQl">
+                <Card bg="#ff4489" color="#fff" text="GraphQl">
                     <SiGraphql />
                 </Card>
-                <Card bg="#17b381" color="#fff" text="VueJS">
+                <Card bg="#3bdaa8" color="#fff" text="VueJS">
                     <SiVuedotjs />
                 </Card>
-                <Card bg="#109269" color="#fff" text="NuxtJS">
+                <Card bg="#34d3a1" color="#fff" text="NuxtJS">
                     <SiNuxtdotjs />
                 </Card>
-                <Card bg="#9b19ff" color="#fff" text="Figma">
+                <Card bg="#b048ff" color="#fff" text="Figma">
                     <SiFigma />
                 </Card>
             </div>
